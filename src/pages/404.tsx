@@ -5,7 +5,10 @@ import ErrorMain from "@/components/containers/ErrorMain";
 
 const ErrorPage = () => {
   return (
-    <Layout>
+    <Layout
+      title="Page Not Found | Zenvix Digital"
+      description="Oops! The page you're looking for doesn't exist. Head back to Zenvix Digital's homepage to find what you need."
+    >
       <CmnBanner title="Error" navigation="Error" />
       <ErrorMain />
     </Layout>

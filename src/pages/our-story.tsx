@@ -7,7 +7,10 @@ import OurAchievement from "@/components/containers/OurAchievement";
 
 const OurStory = () => {
   return (
-    <Layout>
+    <Layout
+      title="Our Story | Zenvix Digital"
+      description="Discover the story behind Zenvix Digital — our journey, mission, values, and commitment to delivering exceptional web development services."
+    >
       <CmnBanner title="Our Story" navigation="Our Story" />
       <OurMission />
       <WorkStepsProject />

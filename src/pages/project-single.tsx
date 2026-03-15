@@ -6,7 +6,10 @@ import UxProcess from "@/components/containers/service-details/UxProcess";
 
 const ProjectDetails = () => {
   return (
-    <Layout>
+    <Layout
+      title="Project Details | Zenvix Digital"
+      description="Explore a detailed case study from Zenvix Digital — how we approached the design and development of this web project from start to finish."
+    >
       <CmnBanner
         title="Brand Identity"
         navigation="Brand Identity"

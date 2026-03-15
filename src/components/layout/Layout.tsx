@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import VanillaTilt from "vanilla-tilt";
@@ -18,14 +19,27 @@ type LayoutProps = {
   handleMouseEnterTitle?: any;
   handleMouseLeaveTitle?: any;
   video?: React.ReactNode;
+  title?: string;
+  description?: string;
+  ogImage?: string;
 };
+
+const BASE_URL = "https://zenvixdigital.com";
 
 const Layout = ({
   children,
   handleMouseEnterTitle,
   handleMouseLeaveTitle,
   video,
+  title,
+  description,
+  ogImage,
 }: LayoutProps) => {
+  const router = useRouter();
+  const pageTitle = title ?? "Zenvix Digital | Web Development Agency";
+  const pageDescription = description ?? "Zenvix Digital — We build fast, modern, and SEO-optimized websites for startups, small businesses, coaches, and personal brands. Get a high-converting website today.";
+  const pageImage = ogImage ?? "/images/og-default.png";
+  const pageUrl = `${BASE_URL}${router.asPath}`;
 
   // tilt effect
   useEffect(() => {
@@ -60,7 +74,7 @@ const Layout = ({
   // fade animation
   useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     const fadeWrapperRefs = document.querySelectorAll(".fade-wrapper");
 
     fadeWrapperRefs.forEach((fadeWrapperRef) => {
@@ -101,7 +115,7 @@ const Layout = ({
   // appear down
   useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     const appearDownSections = document.querySelectorAll(".appear-down");
 
     appearDownSections.forEach((section) => {
@@ -130,7 +144,7 @@ const Layout = ({
   // split text animation
   useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     try {
       new SplitType(".title-anim");
       const titleAnims = document.querySelectorAll(".title-anim");
@@ -170,17 +184,28 @@ const Layout = ({
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="shortcut icon"
-          href="/images/favicon.png"
-          type="image/x-icon"
-        />
-        <title>Zenvix Digital | Web Development Agency</title>
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+        <link rel="canonical" href={pageUrl} />
+
+        {/* Primary Meta */}
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="keywords" content="web development, website design, landing page, e-commerce website, SEO website, speed optimization, Zenvix Digital" />
-        <meta
-          name="description"
-          content="Zenvix Digital — We build fast, modern, and SEO-optimized websites for startups, small businesses, coaches, and personal brands. Get a high-converting website today."
-        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={`${BASE_URL}${pageImage}`} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Zenvix Digital" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={`${BASE_URL}${pageImage}`} />
       </Head>
       <div className={combinedClassName}>
         <Header

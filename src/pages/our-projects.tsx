@@ -7,7 +7,10 @@ import CtaTwo from "@/components/containers/service-details/CtaTwo";
 
 const OurProjects = () => {
   return (
-    <Layout>
+    <Layout
+      title="Our Projects | Zenvix Digital"
+      description="Browse Zenvix Digital's portfolio of completed web projects — from landing pages to full e-commerce solutions built for real businesses."
+    >
       <CmnBanner title="Our Projects" navigation="Our Projects" />
       <ProjectMain />
       <WorkStepsProject />

@@ -5,7 +5,10 @@ import BlogMain from "@/components/containers/blog/BlogMain";
 
 const BlogPage = () => {
   return (
-    <Layout>
+    <Layout
+      title="Blog | Zenvix Digital"
+      description="Read the Zenvix Digital blog for tips on web development, SEO, website design, and how to grow your business online."
+    >
       <CmnBanner title="Blog Standard" navigation="Blog Standard" />
       <BlogMain />
     </Layout>

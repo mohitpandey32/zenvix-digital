@@ -1,0 +1,12 @@
+# Robots.txt - Zenvix Digital
+# https://zenvixdigital.in
+
+User-agent: *
+Allow: /
+
+# Block internal Next.js paths
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://zenvixdigital.in/sitemap.xml

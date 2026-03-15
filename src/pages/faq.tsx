@@ -5,7 +5,10 @@ import FaqMain from "@/components/containers/FaqMain";
 
 const FaqPage = () => {
   return (
-    <Layout>
+    <Layout
+      title="FAQ | Zenvix Digital"
+      description="Find answers to frequently asked questions about Zenvix Digital's web development services, pricing, timelines, and process."
+    >
       <CmnBanner title="Faq" navigation="Faq" />
       <FaqMain />
     </Layout>

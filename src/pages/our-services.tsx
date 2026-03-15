@@ -7,7 +7,10 @@ import CtaTwo from "@/components/containers/service-details/CtaTwo";
 
 const OurServices = () => {
   return (
-    <Layout>
+    <Layout
+      title="Our Services | Zenvix Digital"
+      description="Explore Zenvix Digital's services: web development, landing pages, e-commerce websites, SEO optimization, and speed performance for your business."
+    >
       <CmnBanner title="Our Services" navigation="Our Services" />
       <ServiceMain />
       <UxProcessTwo />

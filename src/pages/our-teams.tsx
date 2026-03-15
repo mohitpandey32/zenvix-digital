@@ -5,7 +5,10 @@ import TeamMain from "@/components/containers/TeamMain";
 
 const OurTeams = () => {
   return (
-    <Layout>
+    <Layout
+      title="Our Team | Zenvix Digital"
+      description="Meet the talented team at Zenvix Digital — designers, developers, and strategists dedicated to building outstanding websites for your business."
+    >
       <CmnBanner title="Awesome Teams" navigation="Our Teams" />
       <TeamMain />
     </Layout>

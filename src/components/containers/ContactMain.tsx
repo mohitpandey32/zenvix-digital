@@ -19,11 +19,9 @@ const ContactMain = () => {
               <div className="content">
                 <h4>Phone & Fax</h4>
                 <p>
-                  <Link href="tel:197-90-56-780">Mobile : +197-90-56-780</Link>
+                  <Link href="tel:+918179372098">Mobile : +91 8179372098</Link>
                 </p>
-                <p>
-                  <Link href="tel:197-90-56-780">Fax : +44-208-1234567</Link>
-                </p>
+
               </div>
             </div>
           </div>
@@ -35,8 +33,8 @@ const ContactMain = () => {
               <div className="content">
                 <h4>Mail Address</h4>
                 <p>
-                  <Link href="mailto:hello@zenvixdigital.in">
-                    hello@zenvixdigital.in
+                  <Link href="mailto:contact@zenvixdigital.in">
+                    contact@zenvixdigital.in
                   </Link>
                 </p>
                 <p>
@@ -70,11 +68,11 @@ const ContactMain = () => {
               <div className="thumb">
                 <Image src={time} alt="Image" />
               </div>
-              <div className="content">
+              {/* <div className="content">
                 <h4>Office Hours</h4>
                 <p>Mon - Fri 9:00am - 6:00pm IST</p>
                 <p>Sat 10:00am - 2:00pm IST</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -99,7 +97,7 @@ const ContactMain = () => {
                   <div className="contact-main__form  fade-top">
                     <h3>Leave A Message</h3>
                     <form
-                       name="contact" method="POST" data-netlify="true"
+                      name="contact" method="POST" data-netlify="true"
                     >
                       <div className="group-wrapper">
                         <div className="group-input ">

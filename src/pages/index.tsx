@@ -11,7 +11,11 @@ import NextPageLight from "@/components/containers/home/NextPageLight";
 
 const Home = () => {
   return (
-    <Layout video={true}>
+    <Layout
+      video={true}
+      title="Zenvix Digital | Web Development Agency"
+      description="Zenvix Digital builds fast, modern, and SEO-optimized websites for startups, small businesses, coaches, and personal brands. Get a high-converting website today."
+    >
       <HomeOneBanner />
       <Agency />
       <PortfolioText />

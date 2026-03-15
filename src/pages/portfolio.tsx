@@ -5,7 +5,10 @@ import PortfolioMain from "@/components/containers/PortfolioMain";
 
 const OurPortfolio = () => {
   return (
-    <Layout>
+    <Layout
+      title="Portfolio Gallery | Zenvix Digital"
+      description="View Zenvix Digital's portfolio gallery showcasing our best website design and development work for clients across various industries."
+    >
       <CmnBanner title="Portfolio Gallery" navigation="Portfolio Gallery" />
       <PortfolioMain />
     </Layout>

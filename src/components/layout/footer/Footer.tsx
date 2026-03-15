@@ -24,9 +24,9 @@ const Footer = () => {
                 />
               </Link>
               <div className="footer__single-meta">
-                <Link href="mailto:hello@zenvixdigital.in">
+                <Link href="mailto:contact@zenvixdigital.in">
                   <i className="fa-sharp fa-solid fa-envelope"></i>
-                  hello@zenvixdigital.in
+                  contact@zenvixdigital.in
                 </Link>
                 <Link href="https://zenvixdigital.in" target="_blank">
                   <i className="fa-sharp fa-solid fa-globe"></i>

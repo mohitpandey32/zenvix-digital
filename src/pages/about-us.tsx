@@ -7,7 +7,10 @@ import HomeTestimonial from "@/components/containers/home/HomeTestimonial";
 
 const AboutUs = () => {
   return (
-    <Layout>
+    <Layout
+      title="About Us | Zenvix Digital"
+      description="Learn about Zenvix Digital — who we are, our mission, and the expert team behind every high-converting website we build."
+    >
       <CmnBanner title="About Us" navigation="About Us" />
       <Agency />
       <TeamMembers />
